@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="device-width, initial-scale=1.0" />
+    <title></title>
+</head>
+<body>
+    <div id = "map"></div>
+    <script>
+        var map = L.map('map').setView([37.152495, -79.246333], 16);
+        L.tileLayer('https://api.maptiler.com/maps/hybrid-v4/{z}/{x}/{y}.jpg?key=4wivPAKIM4WYHfsaHJyN', {
+            attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+        }).addTo(map);
+        var TI7 = 'img/Testphoto7.png',
+            imageBounds_1 = [[37.15983772885349, -79.25300227882227], [37.149405943414514, -79.23603531366597]];
+        L.imageOverlay(TI7, imageBounds_1).addTo(map);
+        var TI9 = 'img/Testphoto9.png',
+            imageBounds_2 = [[37.15114248409758, -79.23789518529367], [37.14812882917518, -79.22767305097662]];
+        L.imageOverlay(TI9, imageBounds_2).addTo(map);
+        var marker = L.marker([37.15720116706461, -79.24729225255646]).addTo(map);
+        var marker2 = L.marker([37.15661590720252, -79.24745170230574]).addTo(map);
+        var marker3 = L.marker([37.15511970480832, -79.24880759411802]).addTo(map);
+        var marker4 = L.marker([37.15464968419253, -79.24997196926209]).addTo(map);
+        var marker5 = L.marker([37.15470927765968, -79.24928578305226]).addTo(map);
+        var marker6 = L.marker([37.154747236945084, -79.24647497530597]).addTo(map);
+        var marker7 = L.marker([37.15144754330367, -79.24511557420857]).addTo(map);
+        var marker8 = L.marker([37.15194575329461, -79.2450976886488]).addTo(map);
+        var marker9 = L.marker([37.15073360555668, -79.24527850149519]).addTo(map);
+        var marker10 = L.marker([37.15329235093825, -79.2447329256666]).addTo(map);
+        var marker11 = L.marker([37.15239421536693, -79.24409664902865]).addTo(map);
+        var marker12 = L.marker([37.149683576674256, -79.23212257333348]).addTo(map);
+        var marker13 = L.marker([37.150185044968204, -79.2289825390958]).addTo(map);
+        var marker14 = L.marker([37.1506090841006, -79.2287495041427]).addTo(map);
+
+        marker.bindPopup("<b>Village 1</b><br> Village 1 consists of 19 tiny homes and a Village Community Center where Patriots cook and share meals, enjoy fitness and recreational activities, participate in classes and special events, and grow stronger together.");
+        marker2.bindPopup("<b>Test Marker 2</b><br>This is a test marker.");
+        marker3.bindPopup("<b>Test Marker 3</b><br>This is a test marker.");
+        marker4.bindPopup("<b>Test Marker 4</b><br>This is a test marker.");
+        marker5.bindPopup("<b>Test Marker 5</b><br>This is a test marker.");
+        marker6.bindPopup("<b>Test Marker 6</b><br>This is a test marker.");
+        marker7.bindPopup("<b>Test Marker 7</b><br>This is a test marker.");
+        marker8.bindPopup("<b>Test Marker 8</b><br>This is a test marker.");
+        marker9.bindPopup("<b>Test Marker 9</b><br>This is a test marker.");
+        marker10.bindPopup("<b>Test Marker 10</b><br>This is a test marker.");
+        marker11.bindPopup("<b>Test Marker 11</b><br>This is a test marker.");
+        marker12.bindPopup("<b>Test Marker 12</b><br>This is a test marker.");
+        marker13.bindPopup("<b>Test Marker 13</b><br>This is a test marker.");
+        marker14.bindPopup("<b>Test Marker 14</b><br>This is a test marker.");
+    </script>
+</body>
+</html>
